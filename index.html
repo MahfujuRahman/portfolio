@@ -37,9 +37,12 @@
       property="og:url"
       content="https://mahfujurahman.github.io/portfolio"
     />
-    
+
     <!-- Open Graph Image Meta Tags -->
-    <meta property="og:image" content="https://mahfujurahman.github.io/portfolio/assets/images/meta.webp" />
+    <meta
+      property="og:image"
+      content="https://mahfujurahman.github.io/portfolio/assets/images/meta.webp"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="S. M. Mahfujur Rahman's Image" />
@@ -112,36 +115,6 @@
       </div>
       <!-- Bottom To Top End -->
 
-      <!-- Header Section Start -->
-      <div class="cv_header_wrapper">
-        <div class="cv_container container-fluid">
-          <div class="row">
-            <div class="col-12">
-              <div class="cv_navbar">
-                <div class="cv_logo">
-                  <a href="index.html">
-                    <!-- <img src="assets/images/logo.png" class="img-fluid" /> -->
-                  </a>
-                </div>
-                <a href="javascript:void(0);" class="cv_toggle_btn">
-                  <!-- <svg class="ham hamRotate ham7" viewBox="0 0 100 100">
-                    <path
-                      class="line top"
-                      d="m 70,33 h -40 c 0,0 -6,1.368796 -6,8.5 0,7.131204 6,8.5013 6,8.5013 l 20,-0.0013"
-                    ></path>
-                    <path class="line middle" d="m 70,50 h -40"></path>
-                    <path
-                      class="line bottom"
-                      d="m 69.575405,67.073826 h -40 c -5.592752,0 -6.873604,-9.348582 1.371031,-9.348582 8.244634,0 19.053564,21.797129 19.053564,12.274756 l 0,-40"
-                    ></path>
-                  </svg> -->
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Header -->
       <header class="bix-static cv_header_wrapper">
         <div class="cv_container container-fluid">
@@ -181,9 +154,9 @@
                     <li>
                       <a href="#exprience">Exprience</a>
                     </li>
-                    <!-- <li>
+                    <li>
                       <a href="#portfolio">My Work</a>
-                    </li> -->
+                    </li>
                     <li>
                       <a href="#strength">Strength</a>
                     </li>
@@ -217,9 +190,9 @@
                   <li>
                     <a href="#exprience">Exprience</a>
                   </li>
-                  <!-- <li>
+                  <li>
                     <a href="#portfolio">My Work</a>
-                  </li> -->
+                  </li>
                   <li>
                     <a href="#strength">Strength</a>
                   </li>
@@ -307,7 +280,9 @@
               </div>
               <div class="col-xl-6">
                 <div class="cv_banner_text" data-aos="fade-right">
-                  <h5 style="background-color: #1230b9; margin-top: 25px;">Software Engineer</h5>
+                  <h5 style="background-color: #1230b9; margin-top: 25px">
+                    Software Engineer
+                  </h5>
                   <h1>
                     Hello!
                     <span
@@ -856,71 +831,156 @@
         <!-- Skill Section End -->
 
         <!-- Project Section Start -->
-        <!-- <section class="cv_project_wrapper" id="portfolio">
+        <!-- Project Section Start -->
+        <section class="cv_project_wrapper" id="portfolio">
           <div class="cv_container container-fluid">
             <div class="row">
               <div class="col-12">
-                <div class="cv_sec_heading" data-aos="zoom-out">
-                  <h2>Latest Projects</h2>
-                  <p class="text-justify">
-                    Here are some of the innovative projects I have built or
-                    collaborated on. Feel free to visit and explore the details
-                    :
-                  </p>
-                </div>
+          <div class="cv_sec_heading" data-aos="zoom-out">
+            <h2>Latest Projects</h2>
+            <p class="text-justify">
+              Here are some of the innovative projects I have built or
+              collaborated on. Feel free to visit and explore the details
+              :
+            </p>
+          </div>
               </div>
 
               <div
-                class="col-12 slide_container container-fluid overflow-hidden m-auto"
+          class="col-12 slide_container container-fluid overflow-hidden m-auto"
               >
-                <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                    @foreach ($projects as $item)
-                    <div
-                      class="cv_project_box swiper-slide p-2"
-                      data-aos="zoom-out-down"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      data-title="{{ $item->title }}"
-                      data-image="{{ asset('uploads/project/resized/' . $item->thumbnail) }}"
-                      data-description="{{ htmlspecialchars($item->description, ENT_QUOTES, 'UTF-8') }}"
-                      data-time="{{ $item->created_at->diffForHumans() }}"
-                    >
-                      <div class="cv_project_img">
-                        <img
-                          src="{{ asset('uploads/project/resized/' . $item->thumbnail) }}"
-                          class="img-fluid project_img"
-                        />
-                      </div>
-                      <div class="cv_project_text">
-                        <div class="cv_project_heading">
-                          <p>{{ $item->category->name }}</p>
-                          <span>
-                            <img src="assets/images/time.svg" />
-                            {{ $item->created_at->diffForHumans() }}
-                          </span>
-                        </div>
-                        <div class="cv_project_title">
-                          <p>{{ $item->title }}</p>
-                        </div>
-                      </div>
-                    </div>
-                    @endforeach
-                  </div>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div
+                class="cv_project_box swiper-slide p-2"
+                data-aos="zoom-out-down"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-title="E-Commerce Website"
+                data-image="assets/images/port-1.webp"
+                data-description="A fully responsive e-commerce platform built with Laravel and Vue.js, featuring user authentication, payment integration, and admin dashboard."
+                data-time="2 months ago"
+              >
+                <div class="cv_project_img">
+            <img
+              src="assets/images/port-1.webp"
+              class="img-fluid project_img"
+            />
+                </div>
+                <div class="cv_project_text">
+            <div class="cv_project_heading">
+              <p>Website</p>
+              <span>
+                <img src="assets/images/time.svg" />
+                2 months ago
+              </span>
+            </div>
+            <div class="cv_project_title">
+              <p>E-Commerce Website</p>
+            </div>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="cv_bottom_btn" data-aos="zoom-in-down">
-                  <a href="{{ route('project') }}" class="cv_btn">View More</a>
+              <div
+                class="cv_project_box swiper-slide p-2"
+                data-aos="zoom-out-down"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-title="Portfolio Dashboard"
+                data-image="assets/images/port-2.webp"
+                data-description="An interactive portfolio dashboard using HTML, CSS, JavaScript, and Bootstrap, showcasing projects with filtering and animations."
+                data-time="1 month ago"
+              >
+                <div class="cv_project_img">
+            <img
+              src="assets/images/port-2.webp"
+              class="img-fluid project_img"
+            />
+                </div>
+                <div class="cv_project_text">
+            <div class="cv_project_heading">
+              <p>Dashboard</p>
+              <span>
+                <img src="assets/images/time.svg" />
+                1 month ago
+              </span>
+            </div>
+            <div class="cv_project_title">
+              <p>Portfolio Dashboard</p>
+            </div>
+                </div>
+              </div>
+              <div
+                class="cv_project_box swiper-slide p-2"
+                data-aos="zoom-out-down"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-title="Mobile App UI"
+                data-image="assets/images/port-3.webp"
+                data-description="A modern mobile app UI design created with Figma and implemented using Vue.js, focusing on user experience and responsive layouts."
+                data-time="3 weeks ago"
+              >
+                <div class="cv_project_img">
+            <img
+              src="assets/images/port-3.webp"
+              class="img-fluid project_img"
+            />
+                </div>
+                <div class="cv_project_text">
+            <div class="cv_project_heading">
+              <p>Mobile App</p>
+              <span>
+                <img src="assets/images/time.svg" />
+                3 weeks ago
+              </span>
+            </div>
+            <div class="cv_project_title">
+              <p>Mobile App UI</p>
+            </div>
+                </div>
+              </div>
+              <div
+                class="cv_project_box swiper-slide p-2"
+                data-aos="zoom-out-down"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                data-title="Creative Landing Page"
+                data-image="assets/images/port-4.webp"
+                data-description="A creative landing page for a startup, built with Tailwind CSS and JavaScript, featuring smooth animations and call-to-action sections."
+                data-time="1 week ago"
+              >
+                <div class="cv_project_img">
+            <img
+              src="assets/images/port-4.webp"
+              class="img-fluid project_img"
+            />
+                </div>
+                <div class="cv_project_text">
+            <div class="cv_project_heading">
+              <p>Creative</p>
+              <span>
+                <img src="assets/images/time.svg" />
+                1 week ago
+              </span>
+            </div>
+            <div class="cv_project_title">
+              <p>Creative Landing Page</p>
+            </div>
                 </div>
               </div>
             </div>
           </div>
-        </section> -->
+              </div>
+              <div class="col-12">
+          <div class="cv_bottom_btn" data-aos="zoom-in-down">
+            <a href="#portfolio" class="cv_btn">View More</a>
+          </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- Project Section End -->
 
         <!-- Portfolio Section Start -->
-        <!-- {{--
         <div class="cv_portfolio_wrapper" id="portfolio">
           <div class="cv_container container-fluid">
             <div class="row">
@@ -957,28 +1017,28 @@
                   <div class="cv_gallery_wrapper" data-aos="fade-left">
                     <div class="cv_gallery_item item-1">
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-1">
+                        <div class="cv_gallery_img img-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="E-Commerce Website" data-image="assets/images/port-1.webp" data-description="A fully responsive e-commerce platform built with Laravel and Vue.js, featuring user authentication, payment integration, and admin dashboard." data-time="2 months ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-1.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
                             <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <h4>E-Commerce Website</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-2">
+                        <div class="cv_gallery_img img-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Portfolio Dashboard" data-image="assets/images/port-2.webp" data-description="An interactive portfolio dashboard using HTML, CSS, JavaScript, and Bootstrap, showcasing projects with filtering and animations." data-time="1 month ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-2.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Dashboard</p>
+                            <h4>Portfolio Dashboard</h4>
                           </span>
                         </div>
                       </div>
-                      <div class="cv_gallery_img img-3">
+                      <div class="cv_gallery_img img-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Creative Website" data-image="assets/images/port-5.webp" data-description="A stunning creative website showcasing modern design principles with smooth animations and interactive elements." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-5.webp"
                           class="img-fluid"
@@ -990,35 +1050,35 @@
                       </div>
                     </div>
                     <div class="cv_gallery_item item-2">
-                      <div class="cv_gallery_img img-4">
+                      <div class="cv_gallery_img img-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Mobile App UI" data-image="assets/images/port-3.webp" data-description="A modern mobile app UI design created with Figma and implemented using Vue.js, focusing on user experience and responsive layouts." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-3.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Mobile App</p>
+                          <h4>Mobile App UI</h4>
                         </span>
                       </div>
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-5">
+                        <div class="cv_gallery_img img-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Creative Landing Page" data-image="assets/images/port-4.webp" data-description="A creative landing page for a startup, built with Tailwind CSS and JavaScript, featuring smooth animations and call-to-action sections." data-time="1 week ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-4.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Creative</p>
+                            <h4>Creative Landing Page</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-6">
+                        <div class="cv_gallery_img img-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Business Website" data-image="assets/images/port-6.webp" data-description="A professional business website with clean design, optimized for performance and search engine visibility." data-time="2 weeks ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-6.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
                             <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <h4>Business Website</h4>
                           </span>
                         </div>
                       </div>
@@ -1030,28 +1090,28 @@
                   <div class="cv_gallery_wrapper">
                     <div class="cv_gallery_item item-1">
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-1">
+                        <div class="cv_gallery_img img-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="E-Commerce Website" data-image="assets/images/port-1.webp" data-description="A fully responsive e-commerce platform built with Laravel and Vue.js, featuring user authentication, payment integration, and admin dashboard." data-time="2 months ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-1.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
                             <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <h4>E-Commerce Website</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-2">
+                        <div class="cv_gallery_img img-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Portfolio Dashboard" data-image="assets/images/port-2.webp" data-description="An interactive portfolio dashboard using HTML, CSS, JavaScript, and Bootstrap, showcasing projects with filtering and animations." data-time="1 month ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-2.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Dashboard</p>
+                            <h4>Portfolio Dashboard</h4>
                           </span>
                         </div>
                       </div>
-                      <div class="cv_gallery_img img-3">
+                      <div class="cv_gallery_img img-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Creative Website" data-image="assets/images/port-5.webp" data-description="A stunning creative website showcasing modern design principles with smooth animations and interactive elements." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-5.webp"
                           class="img-fluid"
@@ -1063,35 +1123,35 @@
                       </div>
                     </div>
                     <div class="cv_gallery_item item-2">
-                      <div class="cv_gallery_img img-4">
+                      <div class="cv_gallery_img img-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Mobile App UI" data-image="assets/images/port-3.webp" data-description="A modern mobile app UI design created with Figma and implemented using Vue.js, focusing on user experience and responsive layouts." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-3.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Mobile App</p>
+                          <h4>Mobile App UI</h4>
                         </span>
                       </div>
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-5">
+                        <div class="cv_gallery_img img-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Creative Landing Page" data-image="assets/images/port-4.webp" data-description="A creative landing page for a startup, built with Tailwind CSS and JavaScript, featuring smooth animations and call-to-action sections." data-time="1 week ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-4.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Creative</p>
+                            <h4>Creative Landing Page</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-6">
+                        <div class="cv_gallery_img img-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Business Website" data-image="assets/images/port-6.webp" data-description="A professional business website with clean design, optimized for performance and search engine visibility." data-time="2 weeks ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-6.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
                             <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <h4>Business Website</h4>
                           </span>
                         </div>
                       </div>
@@ -1103,68 +1163,68 @@
                   <div class="cv_gallery_wrapper">
                     <div class="cv_gallery_item item-1">
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-1">
+                        <div class="cv_gallery_img img-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Mobile App - E-Commerce" data-image="assets/images/port-1.webp" data-description="A fully featured mobile e-commerce app with seamless shopping experience, push notifications, and secure payment integration." data-time="2 months ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-1.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Mobile App</p>
+                            <h4>Mobile App - E-Commerce</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-2">
+                        <div class="cv_gallery_img img-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Social Media App" data-image="assets/images/port-2.webp" data-description="A modern social networking mobile application with real-time chat, stories, and content sharing features." data-time="1 month ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-2.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Mobile App</p>
+                            <h4>Social Media App</h4>
                           </span>
                         </div>
                       </div>
-                      <div class="cv_gallery_img img-3">
+                      <div class="cv_gallery_img img-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Fitness Tracker App" data-image="assets/images/port-5.webp" data-description="A comprehensive fitness tracking mobile app with workout plans, calorie tracking, and progress visualization." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-5.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Mobile App</p>
+                          <h4>Fitness Tracker App</h4>
                         </span>
                       </div>
                     </div>
                     <div class="cv_gallery_item item-2">
-                      <div class="cv_gallery_img img-4">
+                      <div class="cv_gallery_img img-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Mobile App UI" data-image="assets/images/port-3.webp" data-description="A modern mobile app UI design created with Figma and implemented using Vue.js, focusing on user experience and responsive layouts." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-3.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Mobile App</p>
+                          <h4>Mobile App UI</h4>
                         </span>
                       </div>
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-5">
+                        <div class="cv_gallery_img img-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Food Delivery App" data-image="assets/images/port-4.webp" data-description="An intuitive food delivery mobile app with real-time order tracking, restaurant browsing, and integrated payment systems." data-time="1 week ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-4.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Mobile App</p>
+                            <h4>Food Delivery App</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-6">
+                        <div class="cv_gallery_img img-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Travel Booking App" data-image="assets/images/port-6.webp" data-description="A comprehensive travel booking mobile application with flight, hotel reservations, and itinerary management." data-time="2 weeks ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-6.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Mobile App</p>
+                            <h4>Travel Booking App</h4>
                           </span>
                         </div>
                       </div>
@@ -1176,68 +1236,68 @@
                   <div class="cv_gallery_wrapper">
                     <div class="cv_gallery_item item-1">
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-1">
+                        <div class="cv_gallery_img img-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Analytics Dashboard" data-image="assets/images/port-1.webp" data-description="A comprehensive analytics dashboard with real-time data visualization, charts, and business intelligence metrics." data-time="2 months ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-1.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Dashboard</p>
+                            <h4>Analytics Dashboard</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-2">
+                        <div class="cv_gallery_img img-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Portfolio Dashboard" data-image="assets/images/port-2.webp" data-description="An interactive portfolio dashboard using HTML, CSS, JavaScript, and Bootstrap, showcasing projects with filtering and animations." data-time="1 month ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-2.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Dashboard</p>
+                            <h4>Portfolio Dashboard</h4>
                           </span>
                         </div>
                       </div>
-                      <div class="cv_gallery_img img-3">
+                      <div class="cv_gallery_img img-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="CRM Dashboard" data-image="assets/images/port-5.webp" data-description="A customer relationship management dashboard with contact management, sales pipeline, and activity tracking." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-5.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Dashboard</p>
+                          <h4>CRM Dashboard</h4>
                         </span>
                       </div>
                     </div>
                     <div class="cv_gallery_item item-2">
-                      <div class="cv_gallery_img img-4">
+                      <div class="cv_gallery_img img-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="E-Commerce Admin Dashboard" data-image="assets/images/port-3.webp" data-description="A powerful e-commerce admin dashboard for managing products, orders, customers, and inventory with detailed analytics." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-3.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Dashboard</p>
+                          <h4>E-Commerce Admin Dashboard</h4>
                         </span>
                       </div>
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-5">
+                        <div class="cv_gallery_img img-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Project Management Dashboard" data-image="assets/images/port-4.webp" data-description="A collaborative project management dashboard with task tracking, team collaboration, and progress monitoring." data-time="1 week ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-4.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Dashboard</p>
+                            <h4>Project Management Dashboard</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-6">
+                        <div class="cv_gallery_img img-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Financial Dashboard" data-image="assets/images/port-6.webp" data-description="A financial management dashboard with expense tracking, budget planning, and financial reporting capabilities." data-time="2 weeks ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-6.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Dashboard</p>
+                            <h4>Financial Dashboard</h4>
                           </span>
                         </div>
                       </div>
@@ -1249,68 +1309,68 @@
                   <div class="cv_gallery_wrapper">
                     <div class="cv_gallery_item item-1">
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-1">
+                        <div class="cv_gallery_img img-1" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Brand Identity Design" data-image="assets/images/port-1.webp" data-description="A complete brand identity package including logo design, color palette, typography, and brand guidelines for modern startups." data-time="2 months ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-1.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Creative</p>
+                            <h4>Brand Identity Design</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-2">
+                        <div class="cv_gallery_img img-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Digital Art Portfolio" data-image="assets/images/port-2.webp" data-description="A collection of creative digital artworks featuring illustrations, graphics, and visual designs with modern aesthetics." data-time="1 month ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-2.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Creative</p>
+                            <h4>Digital Art Portfolio</h4>
                           </span>
                         </div>
                       </div>
-                      <div class="cv_gallery_img img-3">
+                      <div class="cv_gallery_img img-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="UI/UX Design System" data-image="assets/images/port-5.webp" data-description="A comprehensive design system with reusable components, patterns, and guidelines for creating consistent user interfaces." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-5.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Creative</p>
+                          <h4>UI/UX Design System</h4>
                         </span>
                       </div>
                     </div>
                     <div class="cv_gallery_item item-2">
-                      <div class="cv_gallery_img img-4">
+                      <div class="cv_gallery_img img-4" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Marketing Campaign Design" data-image="assets/images/port-3.webp" data-description="Creative marketing campaign materials including social media graphics, banners, and promotional designs for digital marketing." data-time="3 weeks ago" style="cursor: pointer;">
                         <img
                           src="assets/images/port-3.webp"
                           class="img-fluid"
                         />
                         <span class="cv_gallery_hover">
-                          <p>Website</p>
-                          <h4>Creative Website</h4>
+                          <p>Creative</p>
+                          <h4>Marketing Campaign Design</h4>
                         </span>
                       </div>
                       <div class="cv_gallery_small">
-                        <div class="cv_gallery_img img-5">
+                        <div class="cv_gallery_img img-5" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Creative Landing Page" data-image="assets/images/port-4.webp" data-description="A creative landing page for a startup, built with Tailwind CSS and JavaScript, featuring smooth animations and call-to-action sections." data-time="1 week ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-4.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Creative</p>
+                            <h4>Creative Landing Page</h4>
                           </span>
                         </div>
-                        <div class="cv_gallery_img img-6">
+                        <div class="cv_gallery_img img-6" data-bs-toggle="modal" data-bs-target="#exampleModal" data-title="Packaging Design" data-image="assets/images/port-6.webp" data-description="Innovative product packaging designs combining aesthetics with functionality for various consumer products." data-time="2 weeks ago" style="cursor: pointer;">
                           <img
                             src="assets/images/port-6.webp"
                             class="img-fluid"
                           />
                           <span class="cv_gallery_hover">
-                            <p>Website</p>
-                            <h4>Creative Website</h4>
+                            <p>Creative</p>
+                            <h4>Packaging Design</h4>
                           </span>
                         </div>
                       </div>
@@ -1321,7 +1381,7 @@
               <div class="col-12">
                 <div class="cv_bottom_btn">
                   <a
-                    href="javascript:void(0)"
+                    href="#portfolio"
                     class="cv_btn"
                     data-aos="fade-right"
                     >View More</a
@@ -1331,7 +1391,6 @@
             </div>
           </div>
         </div>
-        --}} -->
         <!-- Portfolio Section End -->
 
         <!-- Do Section Start -->
@@ -1828,7 +1887,7 @@
                 <img
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                  src="{{ asset('assets/images/close3.svg') }}"
+                  src="assets/images/close3.svg"
                   alt="exit"
                   width="50"
                   style="opacity: 70%"
@@ -1846,20 +1905,6 @@
               </div>
               <p id="modal-description" class="my-3 text-justify"></p>
             </div>
-            {{--
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
-            </div>
-            --}}
           </div>
         </div>
       </div>
