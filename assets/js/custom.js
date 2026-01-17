@@ -195,7 +195,7 @@ $(document).ready(function() {
 
 document.getElementById('emailLink').addEventListener('click', function(event) {
     event.preventDefault();
-    var email = "mahfujurahman2020@gmail.com";
+    var email = "mahfujur.dev@gmail.com";
     var subject = "Get in Touch with Me";
     // var body = "Hi S. M. Mahfujur Rahman,\n\nI need some assistance and have a few questions. Could you please reach out to me at your earliest convenience?\n\nThank you,\n[Your information here]";
     var body =
