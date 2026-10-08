@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
 
-# Link to your sitemap
-Sitemap: https://mahfujurahman.github.io/portfolio/sitemap.xml
+Sitemap: https://mahfujur.dev/sitemap.xml
